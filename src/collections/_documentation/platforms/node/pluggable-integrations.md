@@ -23,6 +23,21 @@ Available options:
 }
 ```
 
+### CaptureConsole
+
+_Import name: `Sentry.Integrations.CaptureConsole`_
+
+This integration captures all `Console API` calls and redirects them to Sentry using `captureMessage` call.
+It then retriggers to preserve default native behaviour.
+
+Available options:
+
+```js
+{
+  levels: string[]; // an array of methods that should be captured, defaults to ['log', 'info', 'warn', 'error', 'debug', 'assert']
+}
+```
+
 ### RewriteFrames
 
 _Import name: `Sentry.Integrations.RewriteFrames`_
